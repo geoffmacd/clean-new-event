@@ -23,11 +23,18 @@ extension EKEvent {
     }
 }
 
+public enum EventError: Error {
+    case noEvents
+    case noCalendarAccess
+}
 
 extension EKEventStore {
     
-    func cleanNewEvents() throws {
+    public func cleanNewEvents() throws -> Int {
         print("searching for new events to clean...")
+        guard EKEventStore.authorizationStatus(for: .event) == .authorized else {
+            throw EventError.noCalendarAccess
+        }
         
         // we need to find a range of 4 years, use current as midpoint
         let start: Date  = {
@@ -50,9 +57,15 @@ extension EKEventStore {
         let newEvents = matchingEvents.filter { $0.isNewEvent }
         print("deleting \(newEvents.count) new events...")
         
+        guard !newEvents.isEmpty else {
+            throw EventError.noEvents
+        }
+        
         for event in newEvents {
             try remove(event, span: .thisEvent, commit: false)
         }
         try commit()
+        
+        return newEvents.count
     }
 }

@@ -12,7 +12,64 @@
 		6CC58E6B21A13BCF001A1BBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CC58E6921A13BCF001A1BBB /* Main.storyboard */; };
 		6CC58E6D21A13BD1001A1BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CC58E6C21A13BD1001A1BBB /* Assets.xcassets */; };
 		6CC58E7021A13BD1001A1BBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CC58E6E21A13BD1001A1BBB /* LaunchScreen.storyboard */; };
+		6CC58E8121A146A4001A1BBB /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC58E8021A146A4001A1BBB /* IntentHandler.swift */; };
+		6CC58E9721A146A5001A1BBB /* CleanIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6CC58E7E21A146A4001A1BBB /* CleanIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6CC58EA021A146EF001A1BBB /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 6CC58E9F21A146EF001A1BBB /* Intents.intentdefinition */; };
+		6CC58EAA21A147AB001A1BBB /* EventProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CC58EA821A147AB001A1BBB /* EventProcessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CC58EAD21A147AB001A1BBB /* EventProcessor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC58EA621A147AB001A1BBB /* EventProcessor.framework */; };
+		6CC58EAE21A147AB001A1BBB /* EventProcessor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC58EA621A147AB001A1BBB /* EventProcessor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6CC58EB321A147BE001A1BBB /* EventStore+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC58E7721A13E13001A1BBB /* EventStore+Additions.swift */; };
+		6CC58EB621A148C2001A1BBB /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 6CC58E9F21A146EF001A1BBB /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6CC58E9521A146A5001A1BBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CC58E5A21A13BCF001A1BBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CC58E7D21A146A4001A1BBB;
+			remoteInfo = CleanIntent;
+		};
+		6CC58EAB21A147AB001A1BBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CC58E5A21A13BCF001A1BBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CC58EA521A147AB001A1BBB;
+			remoteInfo = EventProcessor;
+		};
+		6CC58EB921A1513B001A1BBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CC58E5A21A13BCF001A1BBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CC58EA521A147AB001A1BBB;
+			remoteInfo = EventProcessor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6CC58E9E21A146A5001A1BBB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6CC58E9721A146A5001A1BBB /* CleanIntent.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CC58EB221A147AB001A1BBB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6CC58EAE21A147AB001A1BBB /* EventProcessor.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6CC58E6221A13BCF001A1BBB /* CleanNewEvent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanNewEvent.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +79,35 @@
 		6CC58E6C21A13BD1001A1BBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CC58E6F21A13BD1001A1BBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CC58E7121A13BD1001A1BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CC58E7721A13E13001A1BBB /* EventStore+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventStore+Additions.swift"; sourceTree = "<group>"; };
+		6CC58E7921A14656001A1BBB /* CleanNewEvent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CleanNewEvent.entitlements; sourceTree = "<group>"; };
+		6CC58E7E21A146A4001A1BBB /* CleanIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CleanIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CC58E8021A146A4001A1BBB /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		6CC58E8221A146A4001A1BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CC58E8921A146A5001A1BBB /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		6CC58E9F21A146EF001A1BBB /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		6CC58EA621A147AB001A1BBB /* EventProcessor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EventProcessor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CC58EA821A147AB001A1BBB /* EventProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventProcessor.h; sourceTree = "<group>"; };
+		6CC58EA921A147AB001A1BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6CC58E5F21A13BCF001A1BBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC58EAD21A147AB001A1BBB /* EventProcessor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CC58E7B21A146A4001A1BBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CC58EA321A147AB001A1BBB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				6CC58E6421A13BCF001A1BBB /* CleanNewEvent */,
+				6CC58E7F21A146A4001A1BBB /* CleanIntent */,
+				6CC58EA721A147AB001A1BBB /* EventProcessor */,
+				6CC58E8821A146A5001A1BBB /* Frameworks */,
 				6CC58E6321A13BCF001A1BBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				6CC58E6221A13BCF001A1BBB /* CleanNewEvent.app */,
+				6CC58E7E21A146A4001A1BBB /* CleanIntent.appex */,
+				6CC58EA621A147AB001A1BBB /* EventProcessor.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +141,7 @@
 		6CC58E6421A13BCF001A1BBB /* CleanNewEvent */ = {
 			isa = PBXGroup;
 			children = (
+				6CC58E7921A14656001A1BBB /* CleanNewEvent.entitlements */,
 				6CC58E6521A13BCF001A1BBB /* AppDelegate.swift */,
 				6CC58E6721A13BCF001A1BBB /* ViewController.swift */,
 				6CC58E6921A13BCF001A1BBB /* Main.storyboard */,
@@ -64,7 +152,46 @@
 			path = CleanNewEvent;
 			sourceTree = "<group>";
 		};
+		6CC58E7F21A146A4001A1BBB /* CleanIntent */ = {
+			isa = PBXGroup;
+			children = (
+				6CC58E8021A146A4001A1BBB /* IntentHandler.swift */,
+				6CC58E8221A146A4001A1BBB /* Info.plist */,
+				6CC58E9F21A146EF001A1BBB /* Intents.intentdefinition */,
+			);
+			path = CleanIntent;
+			sourceTree = "<group>";
+		};
+		6CC58E8821A146A5001A1BBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CC58E8921A146A5001A1BBB /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CC58EA721A147AB001A1BBB /* EventProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				6CC58E7721A13E13001A1BBB /* EventStore+Additions.swift */,
+				6CC58EA821A147AB001A1BBB /* EventProcessor.h */,
+				6CC58EA921A147AB001A1BBB /* Info.plist */,
+			);
+			path = EventProcessor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6CC58EA121A147AB001A1BBB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC58EAA21A147AB001A1BBB /* EventProcessor.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		6CC58E6121A13BCF001A1BBB /* CleanNewEvent */ = {
@@ -74,15 +201,55 @@
 				6CC58E5E21A13BCF001A1BBB /* Sources */,
 				6CC58E5F21A13BCF001A1BBB /* Frameworks */,
 				6CC58E6021A13BCF001A1BBB /* Resources */,
+				6CC58E9E21A146A5001A1BBB /* Embed App Extensions */,
+				6CC58EB221A147AB001A1BBB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6CC58E9621A146A5001A1BBB /* PBXTargetDependency */,
+				6CC58EAC21A147AB001A1BBB /* PBXTargetDependency */,
 			);
 			name = CleanNewEvent;
 			productName = CleanNewEvent;
 			productReference = 6CC58E6221A13BCF001A1BBB /* CleanNewEvent.app */;
 			productType = "com.apple.product-type.application";
+		};
+		6CC58E7D21A146A4001A1BBB /* CleanIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CC58E9B21A146A5001A1BBB /* Build configuration list for PBXNativeTarget "CleanIntent" */;
+			buildPhases = (
+				6CC58E7A21A146A4001A1BBB /* Sources */,
+				6CC58E7B21A146A4001A1BBB /* Frameworks */,
+				6CC58E7C21A146A4001A1BBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CC58EBA21A1513B001A1BBB /* PBXTargetDependency */,
+			);
+			name = CleanIntent;
+			productName = CleanIntent;
+			productReference = 6CC58E7E21A146A4001A1BBB /* CleanIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		6CC58EA521A147AB001A1BBB /* EventProcessor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CC58EAF21A147AB001A1BBB /* Build configuration list for PBXNativeTarget "EventProcessor" */;
+			buildPhases = (
+				6CC58EA121A147AB001A1BBB /* Headers */,
+				6CC58EA221A147AB001A1BBB /* Sources */,
+				6CC58EA321A147AB001A1BBB /* Frameworks */,
+				6CC58EA421A147AB001A1BBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EventProcessor;
+			productName = EventProcessor;
+			productReference = 6CC58EA621A147AB001A1BBB /* EventProcessor.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +262,17 @@
 				ORGANIZATIONNAME = "Geoff MacDonald";
 				TargetAttributes = {
 					6CC58E6121A13BCF001A1BBB = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
+					};
+					6CC58E7D21A146A4001A1BBB = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					6CC58EA521A147AB001A1BBB = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -113,6 +291,8 @@
 			projectRoot = "";
 			targets = (
 				6CC58E6121A13BCF001A1BBB /* CleanNewEvent */,
+				6CC58E7D21A146A4001A1BBB /* CleanIntent */,
+				6CC58EA521A147AB001A1BBB /* EventProcessor */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +308,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6CC58E7C21A146A4001A1BBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CC58EA421A147AB001A1BBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -135,12 +329,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC58EB621A148C2001A1BBB /* Intents.intentdefinition in Sources */,
 				6CC58E6821A13BCF001A1BBB /* ViewController.swift in Sources */,
 				6CC58E6621A13BCF001A1BBB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6CC58E7A21A146A4001A1BBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC58EA021A146EF001A1BBB /* Intents.intentdefinition in Sources */,
+				6CC58E8121A146A4001A1BBB /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CC58EA221A147AB001A1BBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CC58EB321A147BE001A1BBB /* EventStore+Additions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6CC58E9621A146A5001A1BBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CC58E7D21A146A4001A1BBB /* CleanIntent */;
+			targetProxy = 6CC58E9521A146A5001A1BBB /* PBXContainerItemProxy */;
+		};
+		6CC58EAC21A147AB001A1BBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CC58EA521A147AB001A1BBB /* EventProcessor */;
+			targetProxy = 6CC58EAB21A147AB001A1BBB /* PBXContainerItemProxy */;
+		};
+		6CC58EBA21A1513B001A1BBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CC58EA521A147AB001A1BBB /* EventProcessor */;
+			targetProxy = 6CC58EB921A1513B001A1BBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6CC58E6921A13BCF001A1BBB /* Main.storyboard */ = {
@@ -281,9 +511,11 @@
 		6CC58E7521A13BD1001A1BBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CleanNewEvent/CleanNewEvent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MNEYYB3Q7H;
+				DEVELOPMENT_TEAM = ZUZQ7T26FT;
 				INFOPLIST_FILE = CleanNewEvent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,9 +531,11 @@
 		6CC58E7621A13BD1001A1BBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CleanNewEvent/CleanNewEvent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MNEYYB3Q7H;
+				DEVELOPMENT_TEAM = ZUZQ7T26FT;
 				INFOPLIST_FILE = CleanNewEvent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -311,6 +545,102 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6CC58E9C21A146A5001A1BBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZUZQ7T26FT;
+				INFOPLIST_FILE = CleanIntent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.geoffmaconald.CleanNewEvent.CleanIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CC58E9D21A146A5001A1BBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZUZQ7T26FT;
+				INFOPLIST_FILE = CleanIntent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.geoffmaconald.CleanNewEvent.CleanIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6CC58EB021A147AB001A1BBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZUZQ7T26FT;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EventProcessor/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.geoffmaconald.EventProcessor;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6CC58EB121A147AB001A1BBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZUZQ7T26FT;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EventProcessor/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.geoffmaconald.EventProcessor;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -331,6 +661,24 @@
 			buildConfigurations = (
 				6CC58E7521A13BD1001A1BBB /* Debug */,
 				6CC58E7621A13BD1001A1BBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CC58E9B21A146A5001A1BBB /* Build configuration list for PBXNativeTarget "CleanIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC58E9C21A146A5001A1BBB /* Debug */,
+				6CC58E9D21A146A5001A1BBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CC58EAF21A147AB001A1BBB /* Build configuration list for PBXNativeTarget "EventProcessor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CC58EB021A147AB001A1BBB /* Debug */,
+				6CC58EB121A147AB001A1BBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
